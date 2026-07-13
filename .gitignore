@@ -216,3 +216,26 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Исключаем сохраненные веса моделей и адаптеры (они должны обучаться в Colab)
+checkpoints/
+output_checkpoints/
+sft_model/
+dpo_style_model/
+reward_model/
+dpo_quality_model/
+simpo_model/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ot
+
+# Исключаем временные файлы Colab/Jupyter и кэш Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.cache/
+data/gold_rm/*.bin
+data/gold_rm/*.safetensors
